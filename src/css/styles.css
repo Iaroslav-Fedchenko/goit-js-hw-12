@@ -1,0 +1,94 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+@import url('./animations.css');
+
+
+
+ button:hover {
+  background: #6c8cff;
+ }
+button {
+  background: #4e75ff;
+  color: #FFF;
+  border-radius: 8px;
+
+}
+
+label {
+  width: 272px;
+height: 40px;
+
+}
+.form {
+  margin-bottom: 32px;
+  margin-top: 36px;
+text-align: center;
+
+}
+.gallery {
+  justify-content: center;
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  gap: 24px;
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+.gallery-item {
+  width: 360px;
+  border: 1px solid #808080;
+
+}
+img {
+  width: 360px;
+height: 200px;
+}
+.info {
+  display: flex;
+text-align: center;
+}
+.loader {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        position: relative;
+        animation: rotate 1s linear infinite
+      }
+      .loader::before , .loader::after {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0px;
+        border-radius: 50%;
+        border: 5px solid #FFF;
+        animation: prixClipFix 2s linear infinite ;
+      }
+      .loader::after{
+        inset: 8px;
+        transform: rotate3d(90, 90, 0, 180deg );
+        border-color: #FF3D00;
+      }
+
+      @keyframes rotate {
+        0%   {transform: rotate(0deg)}
+        100%   {transform: rotate(360deg)}
+      }
+
+      @keyframes prixClipFix {
+          0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+          50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+          75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      }
+      .loader-hidden {
+  display: none;
+}
