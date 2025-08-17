@@ -92,3 +92,22 @@ text-align: center;
       .loader-hidden {
   display: none;
 }
+.load-more {
+  display: block;
+  margin: 20px auto;
+ 
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background: #4e75ff;
+  color: #fff;
+}
+
+.load-more:hover {
+  background: #6c8cff;
+}
+
+.hidden {
+  display: none;
+}
